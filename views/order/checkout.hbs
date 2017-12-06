@@ -1,0 +1,94 @@
+<h1 class="text-center">order Checkout</h1>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Checkout Form</h4>
+                </div>
+                <div class="card-body">
+                    <form action="/order/register" method="POST">
+                        <div class="form-group row">
+                            <label class="col-4 col-md-3 col-form-label">
+                                <b>First Name</b>
+                            </label>
+                            <div class="col-8 col-md-5">
+                                <input type="text" name="menuList" class="form-control" id="articleURLko" placeholder="First Name">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-4 col-md-3 col-form-label">
+                                <b>Last Name</b>
+                            </label>
+                            <div class="col-8 col-md-5">
+                                <input type="text" name="menuItem" class="form-control" id="articleURLko" placeholder="Surname">
+
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-4 col-md-3 col-form-label">
+                                <b>Phone Number</b>
+                            </label>
+                            <div class="col-8 col-md-5">
+                                <input type="number" name="itemDescription" class="form-control" id="articleURLko" placeholder="Phone Number">
+
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-4 col-md-3 col-form-label">
+                                <b>Email</b>
+                            </label>
+                            <div class="col-8 col-md-5">
+                                <input type="email" name="itemCost" class="form-control" id="articleURLko" placeholder="Email">
+
+                            </div>
+                        </div>
+                        
+                         <div class="form-group row">
+                            <label for="exampleFormControlSelect2" class="col-4 col-md-3 col-form-label"><b>Delivery Time Collection Time</b></label> 
+                            <div class="col-8 col-md-5">
+                               <select class="form-control"  id="exampleFormControlSelect2">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </select> 
+                            </div>                     
+                        </div>
+                         <div class="form-group row">
+                            <label for="exampleFormControlTextarea1" class="col-4 col-md-3 col-form-label"><b>Food Note</b></label>
+                            <div class="col-8 col-md-5">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                        </div>
+                         <div class="form-group row">
+                            <label for="exampleFormControlTextarea1" class="col-4 col-md-3 col-form-label"><b>Delivery Note</b></label>
+                            <div class="col-8 col-md-5">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-4 col-md-3 col-form-label">
+                                <b>Voucher</b>
+                            </label>
+                            <div class="col-8 col-md-5">
+                                <input type="email" name="itemCost" class="form-control" id="articleURLko" placeholder="Enter Voucher Code">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row text-center">
+                                <div class="offset-sm-2 col-sm-10">
+                                    <button type="submit" class="btn btn-outline-success mx-2"> Submit </button>
+                                    <button type="reset" class="btn btn-outline-info mx-2"> Reset </button>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

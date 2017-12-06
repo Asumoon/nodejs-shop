@@ -1,0 +1,221 @@
+<div class="container-fluid">
+    <div class="row" id="accordion" role="tablist">
+        <div class="col-md-3">            
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingOne">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Veg Staters 
+                            </a>
+                        </h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingTwo">
+                        <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Non Veg Staters 
+                            </a>
+                        </h5>
+                    </div>
+                </div>            
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingTwo">
+                        <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Collapsible Group
+                            </a>
+                        </h5>
+                    </div>
+                </div>            
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingTwo">
+                        <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Collapsible Group 
+                            </a>
+                        </h5>
+                    </div>
+                </div>            
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingTwo">
+                        <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Collapsible Group 
+                            </a>
+                        </h5>
+                    </div>
+                </div>            
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingTwo">
+                        <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Collapsible Group 
+                            </a>
+                        </h5>
+                    </div>
+                </div>            
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingTwo">
+                        <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Collapsible Group 
+                            </a>
+                        </h5>
+                    </div>
+                </div>            
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingTwo">
+                        <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Collapsible Group 
+                            </a>
+                        </h5>
+                    </div>
+                </div>            
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingNine">
+                        <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                Collapsible Group
+                            </a>
+                        </h5>
+                    </div>
+                </div>            
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingTen">
+                        <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                Collapsible Group
+                            </a>
+                        </h5>
+                    </div>
+                </div>            
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingEleven">
+                        <h5 class="mb-0">
+                            <a class="collapsed" data-toggle="collapse" href="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                Collapsible Group 
+                            </a>
+                        </h5>
+                    </div>
+                </div>            
+        </div>
+        <div class="col-md-6">
+            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">                 
+                    {{#each item_veg}}
+                    <div class="d-inline-block">
+                    <h4> {{this.menuItem}} </h4>
+                    <div class="float-left">{{this.itemDescription}} </div> 
+                    <div class="float-right">
+                       <a href="/order/add-to-cart/{{this._id}}"><button type="button" class="btn btn-outline bg-info"> {{this.price}}</button> </a>
+                    </div>   
+                    </div> <hr>
+                     {{/each}}
+                </div>
+            </div>
+            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">                    
+                  {{#each item_non_veg}}                  
+                    <div class="d-inline-block">
+                    <h4> {{this.menuItem}} </h4>
+                    <div class="float-left">{{this.itemDescription}} </div> 
+                    <div class="float-right">
+                       <a href=""><button type="button" class="btn btn-outline bg-info"> {{this.price}}</button> </a>
+                    </div>   
+                    </div> <hr>
+                     {{/each}}
+                </div>
+            </div>
+            <div id="collapseThree" class="collapse bg-info" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                    
+                    you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+            <div id="collapseFour" class="collapse bg-info" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
+                <div class="card-body">
+                    
+                    you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+            <div id="collapseFive" class="collapse bg-info" role="tabpanel" aria-labelledby="headingFive" data-parent="#accordion">
+                <div class="card-body">
+                    
+                    you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+            <div id="collapseSix" class="collapse bg-info" role="tabpanel" aria-labelledby="headingSix" data-parent="#accordion">
+                <div class="card-body">
+                    
+                    you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+            <div id="collapseSeven" class="collapse bg-info" role="tabpanel" aria-labelledby="headingSeven" data-parent="#accordion">
+                <div class="card-body">
+                    
+                    you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+            <div id="collapseEight" class="collapse bg-info" role="tabpanel" aria-labelledby="headingEight" data-parent="#accordion">
+                <div class="card-body">
+                    
+                    you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+            <div id="collapseNine" class="collapse bg-info" role="tabpanel" aria-labelledby="headingNine" data-parent="#accordion">
+                <div class="card-body">
+                    
+                    you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+            <div id="collapseTen" class="collapse bg-info" role="tabpanel" aria-labelledby="headingTen" data-parent="#accordion">
+                <div class="card-body">
+                    
+                    you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+            <div id="collapseEleven" class="collapse bg-info" role="tabpanel" aria-labelledby="headingEleven" data-parent="#accordion">
+                <div class="card-body">
+                    
+                    you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+           
+{{#if products}}
+<div class="card">
+    <div class="card-header text-center">
+        <h3 class="text-success">
+            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+            Cart List
+            <span class="badge badge-pill badge-danger">{{session.cart.totalQty}}</span>
+        </h3>
+    </div>
+    <div class="card-body">
+        {{!--
+        <button type="button" class="btn">hehe</button> --}} 
+        {{#each products}}
+            <b> {{this.item.menuItem}}</b>
+            <div>
+                Quantity: <b> {{ this.qty }} </b>
+            </div>
+            <div>
+                Price: {{this.price}}
+            </div>
+        {{/each}}
+    </div>
+    <div class="card-footer">
+        <b>Total Cost :- {{ totalPrice}}</b>
+    </div>
+</div>
+{{else}}
+<h1> Cart Item Is Empty</h1>
+{{/if}}
+
+
+        </div>
+    </div>
+</div>
