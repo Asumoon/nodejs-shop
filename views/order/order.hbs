@@ -184,38 +184,21 @@
             </div>
         </div>
         <div class="col-md-3">
-           
-{{#if products}}
-<div class="card">
-    <div class="card-header text-center">
-        <h3 class="text-success">
-            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-            Cart List
-            <span class="badge badge-pill badge-danger">{{session.cart.totalQty}}</span>
-        </h3>
-    </div>
-    <div class="card-body">
-        {{!--
-        <button type="button" class="btn">hehe</button> --}} 
-        {{#each products}}
-            <b> {{this.item.menuItem}}</b>
-            <div>
-                Quantity: <b> {{ this.qty }} </b>
+            <div class="card text-center"> 
+                <div class="card-header text-info">
+                   <h1><i class="fa fa-shopping-cart" aria-hidden="true"></i></h1> 
+                </div>   
+                <div class="card-body">
+                 <h3> Total item in Cart
+                     <span class="badge badge-pill badge-danger">{{session.cart.totalQty}}</span>
+                  </h3> 
+                  <a href="/order/checkout"> <button type="button" class="btn btn-outline-success">Checkout</button> </a>
+                  <a href="/order/checkout"> <button type="button" class="btn btn-outline-success">Order</button> </a>
+                </div>
+                <div class="card-footer">  
+                        <a href="/order/fullcart"> <button type="button" class="btn btn-outline-success">View Cart Item</button> </a>
+                </div>
             </div>
-            <div>
-                Price: {{this.price}}
-            </div>
-        {{/each}}
-    </div>
-    <div class="card-footer">
-        <b>Total Cost :- {{ totalPrice}}</b>
-    </div>
-</div>
-{{else}}
-<h1> Cart Item Is Empty</h1>
-{{/if}}
-
-
         </div>
     </div>
-</div>
+</div>   
