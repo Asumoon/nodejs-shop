@@ -33,6 +33,7 @@ app.use("/popper", express.static(__dirname + "/node_modules/popper.js/dist/"));
 // Routes initial Initialization
 const home_page = require('./routes/home'); // Homepage
 const Orders = require('./routes/orders')
+const Delivery_item = require('./routes/delivery_item')
 // Port Number to Start 
 const port = 3300;
 
@@ -63,6 +64,7 @@ app.set("view engine", ".hbs");
 
 app.use('/',home_page); 
 app.use('/order', Orders)
+app.use('/deliver', Delivery_item)
 
 // Server starting
 app.listen(port, () => {

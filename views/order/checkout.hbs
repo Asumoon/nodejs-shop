@@ -9,13 +9,13 @@
                     <h4>Checkout Form</h4>
                 </div>
                 <div class="card-body">
-                    <form action="/order/register" method="POST">
+                    <form action="/deliver/checkout" method="POST">
                         <div class="form-group row">
                             <label class="col-4 col-md-3 col-form-label">
                                 <b>First Name</b>
                             </label>
                             <div class="col-8 col-md-5">
-                                <input type="text" name="menuList" class="form-control" id="articleURLko" placeholder="First Name">
+                                <input type="text" name="fname" class="form-control" id="articleURLko" placeholder="First Name">
                             </div>
                         </div>
                         <div class="form-group row">
@@ -23,7 +23,7 @@
                                 <b>Last Name</b>
                             </label>
                             <div class="col-8 col-md-5">
-                                <input type="text" name="menuItem" class="form-control" id="articleURLko" placeholder="Surname">
+                                <input type="text" name="lname" class="form-control" id="articleURLko" placeholder="Surname">
 
                             </div>
                         </div>
@@ -32,7 +32,7 @@
                                 <b>Phone Number</b>
                             </label>
                             <div class="col-8 col-md-5">
-                                <input type="number" name="itemDescription" class="form-control" id="articleURLko" placeholder="Phone Number">
+                                <input type="number" name="phone" class="form-control" id="articleURLko" placeholder="Phone Number">
 
                             </div>
                         </div>
@@ -41,7 +41,7 @@
                                 <b>Email</b>
                             </label>
                             <div class="col-8 col-md-5">
-                                <input type="email" name="itemCost" class="form-control" id="articleURLko" placeholder="Email">
+                                <input type="email" name="email" class="form-control" id="articleURLko" placeholder="Email">
 
                             </div>
                         </div>
@@ -49,7 +49,7 @@
                          <div class="form-group row">
                             <label for="exampleFormControlSelect2" class="col-4 col-md-3 col-form-label"><b>Delivery Time Collection Time</b></label> 
                             <div class="col-8 col-md-5">
-                               <select class="form-control"  id="exampleFormControlSelect2">
+                               <select class="form-control"  name="deliveryTime"id="exampleFormControlSelect2">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -61,13 +61,13 @@
                          <div class="form-group row">
                             <label for="exampleFormControlTextarea1" class="col-4 col-md-3 col-form-label"><b>Food Note</b></label>
                             <div class="col-8 col-md-5">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea class="form-control" name="foodNote" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
                         </div>
                          <div class="form-group row">
                             <label for="exampleFormControlTextarea1" class="col-4 col-md-3 col-form-label"><b>Delivery Note</b></label>
                             <div class="col-8 col-md-5">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                <textarea class="form-control" name="deliveryNote" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -75,7 +75,7 @@
                                 <b>Voucher</b>
                             </label>
                             <div class="col-8 col-md-5">
-                                <input type="email" name="itemCost" class="form-control" id="articleURLko" placeholder="Enter Voucher Code">
+                                <input type="text" name="itemCost" name="voucher" class="form-control" id="articleURLko" placeholder="Enter Voucher Code">
 
                             </div>
                         </div>
