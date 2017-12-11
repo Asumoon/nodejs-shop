@@ -37,8 +37,8 @@ router.get('/', (req, res) => {
 });
 
 
-router.get('/deleteitem', (req, res) => { 
-    res.render('order/delivery_item',{
+router.get('/delete_item', (req, res) => { 
+    res.render('order/delete/delete_item',{
         deliver_item:  Delivery.find({}).sort( {_id:-1}).limit(30)      
     });
 });
