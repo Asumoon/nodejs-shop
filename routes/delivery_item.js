@@ -32,7 +32,7 @@ router.post('/checkout',(req, res, next) => {
 
 router.get('/', (req, res) => { 
     res.render('order/delivery_item',{
-        deliver_item:  Delivery.find({}).sort( {_id:-1})       
+        deliver_item:  Delivery.find({}).sort( {_id:-1}).limit(30)      
     });
 });
 

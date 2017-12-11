@@ -1,29 +1,60 @@
 {{#if products}}
-<div class="card">
-    <div class="card-header text-center">
-        <h3 class="text-success">
-            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
-            Cart List
-            <span class="badge badge-pill badge-danger">{{session.cart.totalQty}}</span>
-        </h3>
-    </div>
-    <div class="card-body">
-        {{!--
-        <button type="button" class="btn">hehe</button> --}} 
-        {{#each products}}
-            <b> {{this.item.menuItem}}</b>
-            <div>
-                Quantity: <b> {{ this.qty }} </b>
+<div class="container">
+    <div class="row">
+        <div class="col-2 d-none d-md-block"></div> 
+        <div class="col-12 col-md-8">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h3 class="text-success">
+                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i> Cart List
+                        <span class="badge badge-pill badge-danger">{{session.cart.totalQty}}</span>
+                    </h3>
+                </div>
+                <div class="card-body">
+                    {{!--
+                    <button type="button" class="btn">hehe</button> --}} {{#each products}}
+                    <b> {{this.item.menuItem}}</b>
+                    <div>
+                        Quantity:
+                        <b> {{ this.qty }} </b>
+                    </div>
+                    <div>
+                        Price: {{this.price}}
+                    </div>
+                    {{/each}}
+                </div>
+                <div class="card-footer">
+                    <b>Total Cost :- {{ totalPrice}} </b>
+                     <a href="/order/checkout"> <button type="button" class="btn btn-outline-success">Order</button> </a>
+                    <hr>
+                    <div>
+                        <div class="pull-left">
+                           <a href="/order"><button class="btn btn-outline-info"> Order More Item</button> </a>
+                        </div>
+                        <div class="pull-right">
+                           kei baki
+                        </div>
+                    </div>
+                 
+                 
+                </div>
             </div>
-            <div>
-                Price: {{this.price}}
-            </div>
-        {{/each}}
-    </div>
-    <div class="card-footer">
-        <b>Total Cost :- {{ totalPrice}}</b>
+        </div>
+        <div class="col-2 d-none d-md-block"></div>        
     </div>
 </div>
+
+
+
 {{else}}
-<h1> Cart Item Is Empty</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center my-3 text-danger">
+                 <h1> Cart Item Is Empty</h1>
+                  <a href="/order"><button class="btn btn-outline-info mt-3"> Order </button> </a>
+        </div>
+    </div>
+</div>
+
 {{/if}}
