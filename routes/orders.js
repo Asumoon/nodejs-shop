@@ -56,7 +56,6 @@ router.get('/fullcart', (req, res) => {
 
 router.get('/add-to-cart/:id', (req, res, next) => {
     var productId = req.params.id;
-
     var cart = new Cart(req.session.cart ? req.session.cart : {});
     Order.findById(productId, function(err, product) {
         if (err) {
@@ -72,7 +71,31 @@ router.get('/add-to-cart/:id', (req, res, next) => {
 
 });
 
+router.get('/add/:id', (req,res,next) => {
+    var productId = req.params.id;
+    var cart = new Cart(req.session.cart ? req.session.cart : {});
 
+    cart.addByOne(productId);
+    req.session.cart = cart;
+    res.redirect('/order/fullcart');
+})
+router.get('/reduce/:id', (req,res,next) => {
+    var productId = req.params.id;
+    var cart = new Cart(req.session.cart ? req.session.cart : {});
+
+    cart.reduceByOne(productId);
+    req.session.cart = cart;
+    res.redirect('/order/fullcart');
+})
+
+router.get('/remove-all/:id', (req,res,next) => {
+    var productId = req.params.id;
+    var cart = new Cart(req.session.cart ? req.session.cart : {});
+
+    cart.removeAll(productId);
+    req.session.cart = cart;
+    res.redirect('/order/fullcart');
+})
 
  module.exports = router;
 

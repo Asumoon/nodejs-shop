@@ -18,7 +18,11 @@
                          <p class="mb-0"><b> {{this.item.menuItem}}</b></p>
                           <div>
                         Quantity:
-                        <span class="badge badge-pill badge-info"><b> {{ this.qty }} </b></span>                      
+                        <span class="badge badge-pill badge-info"><b> {{ this.qty }} </b></span> 
+                        <a href="/order/reduce/{{this.item._id}}"><span class="badge badge-secondary">-1</span> </a>
+                        <a href="/order/remove-all/{{this.item._id}}"><span class="badge badge-secondary">remove all</span> </a>
+                        <a href="/order/add/{{this.item._id}}"><span class="badge badge-secondary">+1</span> </a>
+                        
                     </div>
                     <div>
                         Price: 
