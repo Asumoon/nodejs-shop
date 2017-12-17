@@ -27,7 +27,10 @@ router.get('/register', (req, res) => {
 });
 
 router.get('/checkout', (req, res) => {
-    res.render('order/checkout');  
+    var cart = new Cart(req.session.cart);
+    res.render('order/checkout',{        
+        totalPrice: cart.totalPrice
+    });  
 });
 
 router.get('/', (req, res) => { 

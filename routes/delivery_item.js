@@ -17,6 +17,9 @@ router.post('/checkout',(req, res, next) => {
     delivery.foodNote = req.body.foodNote;
     delivery.deliveryNote = req.body.deliveryNote;
     delivery.voucher = req.body.voucher;
+    delivery.pinCode = req.body.pinCode;
+    delivery.deliveryCost = req.body.deliveryCost;
+    delivery.totalPriceCost = req.body.totalPriceCost;
 
     delivery.save(function(err) {
         if (err) {

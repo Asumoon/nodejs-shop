@@ -105,26 +105,26 @@
             <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
                 <div class="card-body">                 
                     {{#each item_veg}}
-                    <div class="d-inline-block">
                     <h4> {{this.menuItem}} </h4>
-                    <div class="float-left">{{this.itemDescription}} </div> 
-                    <div class="float-right">
-                       <a href="/order/add-to-cart/{{this._id}}"><button type="button" class="btn btn-outline bg-info"> {{this.price}}</button> </a>
-                    </div>   
-                    </div> <hr>
+                    <div class="clearfix">
+                        <div class="pull-left">{{this.itemDescription}} </div> 
+                        <div class="pull-right">
+                             <a href="/order/add-to-cart/{{this._id}}"><button type="button" class="btn btn-outline bg-info"> {{this.price}}</button> </a>
+                         </div>
+                    </div>  <hr>
                      {{/each}}
                 </div>
             </div>
             <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
                 <div class="card-body">                    
                   {{#each item_non_veg}}                  
-                    <div class="d-inline-block">
                     <h4> {{this.menuItem}} </h4>
-                    <div class="float-left">{{this.itemDescription}} </div> 
-                    <div class="float-right">
-                       <a href=""><button type="button" class="btn btn-outline bg-info"> {{this.price}}</button> </a>
-                    </div>   
-                    </div> <hr>
+                    <div class="clearfix">
+                        <div class="pull-left">{{this.itemDescription}} </div> 
+                        <div class="pull-right">
+                             <a href="/order/add-to-cart/{{this._id}}"><button type="button" class="btn btn-outline bg-info"> {{this.price}}</button> </a>
+                         </div>
+                    </div>  <hr>
                      {{/each}}
                 </div>
             </div>

@@ -8,9 +8,12 @@ const deliverySchema = mongoose.Schema({
     phone:{ type: Number },  
     email:{ type: String },
     deliveryTime :{ type: Number }, 
-    foodNote:{ type: String } ,
-    deliveryNote:{ type: String } ,
-    voucher:{ type: String } 
+    foodNote:{ type: String },
+    deliveryNote:{ type: String },
+    voucher:{ type: String },
+    pinCode:{ type: String },
+    deliveryCost:{ type: String },
+    totalPriceCost:{ type: String } 
 });
 
 const Delivery = module.exports = mongoose.model('delivery', deliverySchema);

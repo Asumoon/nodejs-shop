@@ -12,22 +12,34 @@
                 </div>
                 <div class="card-body">
                     {{!--
-                    <button type="button" class="btn">hehe</button> --}} {{#each products}}
-                    <b> {{this.item.menuItem}}</b>
-                    <div>
+                    <button type="button" class="btn">hehe</button> --}}
+                 {{#each products}}
+                    <blockquote class="blockquote">
+                         <p class="mb-0"><b> {{this.item.menuItem}}</b></p>
+                          <div>
                         Quantity:
-                        <b> {{ this.qty }} </b>
+                        <span class="badge badge-pill badge-info"><b> {{ this.qty }} </b></span>                      
                     </div>
                     <div>
-                        Price: {{this.price}}
+                        Price: 
+                        <span class="badge badge-pill badge-info"><b> <i class="fa fa-eur" aria-hidden="true"></i> {{this.price}} </b></span>   
                     </div>
-                    {{/each}}
+                    </blockquote> <hr>
+               {{/each}}
+
                 </div>
                 <div class="card-footer">
-                    <b>Total Cost :- {{ totalPrice}} </b>
+                    <div class="clearfix">
+                    <h3 class="pull-left">Total Cost :-
+                        <span class="badge badge-pill badge-info"><b> <i class="fa fa-eur" aria-hidden="true"></i> {{totalPrice}} </b></span>                          
+                    </h3>
+                    <div class="pull-right">
                      <a href="/order/checkout"> <button type="button" class="btn btn-outline-success">Order</button> </a>
+                    </div>
+                    </div>
+                    
                     <hr>
-                    <div>
+                    <div class="clearfix">
                         <div class="pull-left">
                            <a href="/order"><button class="btn btn-outline-info"> Order More Item</button> </a>
                         </div>
