@@ -183,21 +183,43 @@
                 </div>
             </div>
         </div>
+
+
+
+
         <div class="col-md-3">
             <div class="card text-center"> 
                 <div class="card-header text-info">
                    <h1><i class="fa fa-shopping-cart" aria-hidden="true"></i></h1> 
-                </div>   
-                <div class="card-body">
-                 <h3> Total item in Cart
+                    <h3> Total item in Cart
                      <span class="badge badge-pill badge-danger">{{session.cart.totalQty}}</span>
                   </h3> 
-                  <a href="/order/checkout"> <button type="button" class="btn btn-outline-success">Checkout</button> </a>
-                  <a href="/order/checkout"> <button type="button" class="btn btn-outline-success">Order</button> </a>
-                </div>
-                <div class="card-footer">  
-                        <a href="/order/fullcart"> <button type="button" class="btn btn-outline-success">View Cart Item</button> </a>
-                </div>
+                </div>  
+
+                
+                <form id="pinform">      
+                    <div class="card-body">  
+               
+                       <div class="form-group row">
+                            <div class="col-12 col-lg-8">
+                                <input type="number"  name="pinCode" class="form-control" id="articleURLko" placeholder="Enter Pin Code" required >
+                            </div>
+                            <div class="col-12 col-lg-3">
+                             <button onclick="pinCodeCheck()" type="button" class="btn btn-outline-success">Check</button>
+                            </div>
+                        </div> 
+                       
+                         <div>           
+                            <b>  Delivery Charge </b>
+                            <span class="badge badge-pill badge-success"><b> <i class="fa fa-eur" aria-hidden="true"></i> <span id="pinCheck">00</span> </b>
+                            </span>
+                         </div>
+              
+                    </div>
+                    <div class="card-footer"> 
+                         <a href="/order/fullcart"> <button type="button" class="btn btn-outline-success">View Cart Item</button> </a>
+                    </div>
+                 </form>
             </div>
         </div>
     </div>

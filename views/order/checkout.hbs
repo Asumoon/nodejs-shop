@@ -9,13 +9,13 @@
                     <h4>Checkout Form</h4>
                 </div>
                 <div class="card-body">
-                    <form action="/deliver/checkout" method="POST">
+                    <form  id="pinform" action="/deliver/checkout" method="POST">
                         <div class="form-group row">
                             <label class="col-4 col-md-3 col-form-label">
                                 <b>First Name</b>
                             </label>
                             <div class="col-8 col-md-5">
-                                <input type="text" name="fname" class="form-control" id="articleURLko" placeholder="First Name">
+                                <input type="text" name="fname" class="form-control" id="articleURLko" placeholder="First Name" required >
                             </div>
                         </div>
                         <div class="form-group row">
@@ -23,8 +23,7 @@
                                 <b>Last Name</b>
                             </label>
                             <div class="col-8 col-md-5">
-                                <input type="text" name="lname" class="form-control" id="articleURLko" placeholder="Surname">
-
+                                <input type="text" name="lname" class="form-control" id="articleURLko" placeholder="Surname" required >
                             </div>
                         </div>
                         <div class="form-group row">
@@ -32,7 +31,7 @@
                                 <b>Phone Number</b>
                             </label>
                             <div class="col-8 col-md-5">
-                                <input type="number" name="phone" class="form-control" id="articleURLko" placeholder="Phone Number">
+                                <input type="number" name="phone" class="form-control" id="articleURLko" placeholder="Phone Number" required >
 
                             </div>
                         </div>
@@ -41,7 +40,7 @@
                                 <b>Email</b>
                             </label>
                             <div class="col-8 col-md-5">
-                                <input type="email" name="email" class="form-control" id="articleURLko" placeholder="Email">
+                                <input type="email" name="email" class="form-control" id="articleURLko" placeholder="Email" required >
 
                             </div>
                         </div>
@@ -78,40 +77,51 @@
                                 <input type="text"  name="voucher" class="form-control" id="articleURLko" placeholder="Enter Voucher Code">
                             </div>
                         </div>
+
+
                         <div class="form-group row">
                             <label class="col-4 col-md-3 col-form-label">
                                 <b>Enter Pin-Code</b>
                             </label>
-                            <div class="col-8 col-md-5">
-                                <input type="number"  name="pinCode" class="form-control" id="articleURLko" placeholder="Enter Pin Code">
+                            <div class="col-8 col-md-4">
+                                <input type="number"  name="pinCode" class="form-control" placeholder="Enter Pin Code" required>
+                            </div>
+                            <div class="col-12 col-md-3">
+                             <button onclick="pinCodeCheck()" type="button" class="btn btn-outline-success">Check</button>
                             </div>
                         </div>
+
+                         <div class="form-group row">
+                            <div class="col-4 col-md-3">
+                             <b>  Total Item Cost </b>  
+                            </div>                           
+                            <div class="col-8 col-md-5 form-check fm">
+                             <label class="form-check-label fm-rm">
+                                <input class="form-check-input" type="radio"  name="totalPriceCost" id="inlineRadio1" value="{{totalPrice}}" checked > 
+                                 <h4>
+                                      <span class="badge badge-pill badge-info"><b> <i class="fa fa-eur" aria-hidden="true"></i> {{totalPrice}} </b>
+                                      </span> 
+                                 </h4> 
+                             </label>
+                            </div>
+                         </div>
                          
                          <div class="form-group row">
                             <div class="col-4 col-md-3">
                              <b>  Delivery Charge </b>  
                             </div>                           
-                            <div class="col-8 col-md-5 form-check">
-                             <label class="form-check-label">
+                            <div class="col-8 col-md-5 form-check fm">
+                             <label class="form-check-label fm-rm">
                                 <input class="form-check-input" type="radio"  name="deliveryCost" id="inlineRadio1" value="{{totalPrice}}" checked > 
-                                  <span class="badge badge-pill badge-success"><b> <i class="fa fa-eur" aria-hidden="true"></i> 00 </b>
-                                  </span>  
+                                  <h4>
+                                     <span class="badge badge-pill badge-danger"><b> <i class="fa fa-eur" aria-hidden="true"></i> <span id="pinCheck">00</span> </b>
+                                     </span>
+                                  </h4> 
                              </label>
                             </div>
                          </div>
 
-                         <div class="form-group row">
-                            <div class="col-4 col-md-3">
-                             <b>  Total Cost </b>  
-                            </div>                           
-                            <div class="col-8 col-md-5 form-check">
-                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio"  name="totalPriceCost" id="inlineRadio1" value="{{totalPrice}}" checked > 
-                                  <span class="badge badge-pill badge-info"><b> <i class="fa fa-eur" aria-hidden="true"></i> {{totalPrice}} </b>
-                                  </span>  
-                             </label>
-                            </div>
-                         </div>                        
+                                                
 
                         <div class="form-group row text-center">
                                 <div class="offset-sm-2 col-sm-10">
